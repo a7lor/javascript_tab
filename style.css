@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 1rem;
+  color: #493a43;
+  background: #fffaf7;
+  font-family: "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tab-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.tab-buttons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  background-color: #fce9ee;
+  color: #72515d;
+  position: relative;
+  z-index: 2;
+  border: 2px solid transparent;
+  border-bottom: none;
+}
+
+.tab-button.active {
+  background-color: #fff;
+  border: 2px solid #f2cad5;
+  border-bottom: none;
+  margin-bottom: -2px;
+}
+
+.tab-content {
+  display: none;
+  padding: 1rem;
+  border: 2px solid #f2cad5;
+  border-top: none;
+  min-height: 200px;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.encouragement {
+  padding: 1.25rem 0 0.5rem;
+  text-align: center;
+}
+
+.encouragement-button {
+  border: 0;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  color: #684653;
+  background: #fce9ee;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.encouragement-button:hover {
+  background: #f7d7e1;
+  transform: translateY(-2px);
+}
+
+.encouragement-button:focus-visible {
+  outline: 3px solid #a6d8c8;
+  outline-offset: 3px;
+}
+
+.encouragement-message {
+  min-height: 1.5em;
+  margin-top: 0.65rem;
+  color: #637d70;
+}
+
+.encouragement-message.is-updated {
+  animation: message-pop 260ms ease-out;
+}
+
+@keyframes message-pop {
+  50% { transform: scale(1.04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tabUI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>tabUI</h1>
+  </header>
+  <main>
+   <div class="tab-container">
+        <ul class="tab-buttons">
+            <li class="tab-button active" data-id="news">最新記事</li>
+            <li class="tab-button" data-id="popular">人気記事</li>
+            <li class="tab-button" data-id="connection">関連記事</li>
+            <li class="tab-button" data-id="category">カテゴリ別</li>
+        </ul>
+
+        <div class="tab-contents">
+            <div class="tab-content active" id="news">
+                <h2>最新記事</h2>
+                <p>ここに最新記事の説明が入ります。</p>
+            </div>
+            <div class="tab-content" id="popular">
+                <h2>人気記事</h2>
+                <p>ここに人気記事の説明が入ります。</p>
+            </div>
+             <div class="tab-content" id="connection">
+                <h2>関連記事</h2>
+                <p>ここに関連記事の説明が入ります。</p>
+            </div>
+            <div class="tab-content" id="category">
+                <h2>カテゴリ別</h2>
+                <p>ここにカテゴリ別の記事が入ります。</p>
+            </div>
+        </div>
+
+        <div class="encouragement">
+          <button class="encouragement-button" type="button">応援をもらう</button>
+          <p class="encouragement-message" role="status" aria-live="polite">ボタンを押すと、ちいさな応援が届きます。</p>
+        </div>
+    </div>
+
+  </main>
+  <footer>
+    <p>© SampleSite</p>
+  </footer>
+</body>
+
+</html>
